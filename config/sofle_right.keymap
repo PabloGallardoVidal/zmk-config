@@ -1,12 +1,21 @@
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
+# Split + BLE
+CONFIG_ZMK_SPLIT=y
+CONFIG_ZMK_BLE=y
 
-/ {
-  keymap {
-    compatible = "zmk,keymap";
+# Display: usa status screen CUSTOM (nice!view)
+CONFIG_ZMK_DISPLAY=y
+CONFIG_ZMK_DISPLAY_STATUS_SCREEN_CUSTOM=y
 
-    default_layer {
-      bindings = <&kp A>;
-    };
-  };
-};
+# Evita duplicados: desactiva widgets built-in
+CONFIG_ZMK_WIDGET_LAYER_STATUS=n
+CONFIG_ZMK_WIDGET_BATTERY_STATUS=n
+CONFIG_ZMK_WIDGET_OUTPUT_STATUS=n
+CONFIG_ZMK_WIDGET_WPM_STATUS=n
+
+# Logs off
+CONFIG_LOG=n
+CONFIG_ZMK_USB_LOGGING=n
+
+# Deep sleep (OJO: es en milisegundos)
+CONFIG_ZMK_SLEEP=y
+CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=300000  # 5 minutos
