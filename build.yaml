@@ -1,8 +1,5 @@
 include:
-  # IZQUIERDA
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: sofle_left nice_view_adapter nice_view
-
-  # DERECHA
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: sofle_right nice_view_adapter nice_view
