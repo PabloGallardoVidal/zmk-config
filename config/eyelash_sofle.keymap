@@ -105,6 +105,10 @@
 &trans  &trans        &trans        &trans  &trans  &trans    &mkp LCLK        &trans   &trans   &trans  &trans  &trans
             >;
 
+            display-name = "layer3";
+            sensor-bindings = <&scroll_encoder>;
+        };
+
 
         layer_3 {
             bindings = <
